@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name irq_led)(type Legacy)(uri ${KIPRJMOD}/library/irq_led.lib)(options "")(descr ""))
-)

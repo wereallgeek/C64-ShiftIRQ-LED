@@ -1,14 +1,15 @@
-# C64 IRQ LED
-I was looking for something similar to the Amigas Bifrost-module, but for the Commodore 64 since that is the machine that is closest to my 8-bit heart. Looking around I found an [article](https://www.nightfallcrew.com/04/03/2011/commodore-64-irq-bicolor-led/) with a snippet from an old dutch magazine (complete copy [here](https://github.com/tebl/C64-IRQ-LED/blob/main/gallery/resetknop.jpg)), it uses a dual-colour LED that changes colour depending on the status of the IRQ-line. What that means is that when the Commodore 64 is accessing I/O devices such as system ROMs, cartridge or disk systems the power LED will change to green - and back to red again, when finished. Exciting stuff!
+# C64 Shift-IRQ LED
+This project extends the IRQ-LED project by TEBL
 
-![It's green!](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2023.27.16.jpg)
+It adds a supplemental LED, in addition to CPU indication (via IRQ) another LED is used for demonstrating the mechboard's SHIFT.
+Instead of a bicolor LED, an RGB LED to be used.
+
+I removed the switch simply because I never use it on any of the (original TEBL) IRQ installations I have made, and because it saved room to add the 3rd resistor on ssame sized board.
 
 ## Build and install
-Most of the construction is straight forward, just follow the BOM below as well as the notices where you need to make a few decisions. Do I need or want to bother with a switch? Does my RGB LED work?
+Most of the construction is straight forward, just follow the BOM below as well as the notices where you need to make a few decisions. 
 
-Connector J2 is there so you can use an SPDT-switch to disable the LED module, ensuring it will always stay red. According to discussions I've seen, it might get irritating when using things such as GEOS because *everything* uses an IRQ, so if you do - consider wiring up one to these pins. If you do not need it, solder a piece of wire across pins 1-2.
-
-You need to get a common cathode (*CC*) LED with more than one colour, ideally a dual colour one like in the original article. Personally I just cut off the blue pin on a *CC* RGB, then used that though the effect is better with frosted LEDs instead of the clear ones. **Don't** solder it into place until you've test-fitted it for length in place inside your C64 case, solder everything else instead.
+This project will need a common cathode (*CC*) RGB LED. The effect is better with frosted LEDs instead of the clear ones. **Don't** solder it into place until you've test-fitted it for length in place inside your C64 case, solder everything else instead.
 
 ![All together now](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2000.48.12.jpg)
 ![Fitting](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2000.47.35.jpg)
@@ -30,12 +31,9 @@ Most parts should be easy to get a hold of from your favourite local electronic 
 | Reference    | Item                                  | Count |
 | ------------ | ------------------------------------- | ----- |
 | PCB          | Fabricate using Gerber files ([order](https://www.pcbway.com/project/shareproject/Commodore_64_IRQ_LED.html))  |     1 |
-| D1 *         | 5mm Bi-colour LED (common cathode)    |     1 |
-| J1           | 3-pin right-angle header pins         |     1 |
-| J2 **        | Piece of wire                         |     1 |
-| R1,R2        | 330 ohm resistor                      |     2 | 
+| D1 *         | 5mm RGB LED (common cathode)          |     1 |
+| J1           | 4-pin right-angle header pins         |     1 |
+| R1,R2,R3     | 330 ohm (or more) resistor            |     3 | 
 | U1           | 74LS04 or 74HCT04 (DIP-14)            |     1 |
 
-*) These are 3 pin LEDs of the common cathode variety, check using diode test on a multimeter to ensure that the center pin is GND and that you know which colour goes where. Alternatively, jam a CR2032 battery between the pins. Common cathode RGB LED can be used, just cut off the blue one.
-
-**) You can wire a 3-pin SPDT wire into these pins as a means to enable/disable the mod, solder a piece of leftover wire between pins 1-2 to enable it permanently (if you do not want a switch).
+*) These are 4 pin LEDs of the common cathode variety, check using diode test on a multimeter to ensure that the center pin is GND and that you know which colour goes where. Alternatively, jam a CR2032 battery between the pins. Common cathode RGB LED can be used, just cut off the blue one.
