@@ -146,7 +146,7 @@
 				(pins "3" "4" "1" "2")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.655 1.08)
@@ -391,7 +391,7 @@
 				(pins "1" "2" "3" "4")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
@@ -1265,7 +1265,7 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm* SSOP?14* TSSOP?14*")
-		(path "/00000000-0000-0000-0000-0000602a3cc3")
+		(path "/00000000-0000-0000-0000-0000602a2a50")
 		(sheetname "/")
 		(sheetfile "C64 IRQ LED.kicad_sch")
 		(units
@@ -1298,7 +1298,7 @@
 				(pins "14" "7")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 6.06 -1.33)
