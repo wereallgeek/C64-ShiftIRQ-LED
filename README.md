@@ -6,7 +6,7 @@ When I [built my Mechboard64](https://wereallgeeks.wordpress.com/2025/11/18/comm
 
 That said, adding this SHIFT-LOCK mod meant I lost the ability to add the [CPU usage indicator](https://wereallgeeks.wordpress.com/2023/04/24/irqmod/) and that is a shame as this is a fun mod to add to any commodore.
 
-So I wondered if it is possible to alter the original circuitry to add a 3rd color (RGB LED?) - the power LED (green) remains ON except when the CPU is working (RED) but the caps-lock alter the color when activated.
+So I wondered if it is possible to alter the original circuitry to add a 3rd color (RGB LED?) - the power LED (green) remains ON except when the CPU is working (RED) but the caps-lock alters the color when it is activated.
 
 The IRQ LED module is a simple design based on a 74LS04 logic chip.
 [Here is the original design by TEBL](https://github.com/tebl/C64-IRQ-LED)
