@@ -42,7 +42,7 @@ Most parts should be easy to get a hold of from your favourite local electronic 
 | PCB          | Fabricate using Gerber files          |     1 |
 | D1 *         | 5mm RGB LED (common cathode)          |     1 |
 | J1           | 4-pin right-angle header pins         |     1 |
-| R1,R2,R3     | 330 ohm resistor                      |     2 | 
+| R1,R2,R3     | 330 ohm resistor                      |     3 | 
 | U1           | 74LS04 or 74HCT04 (DIP-14)            |     1 |
 
 *) These are 4 pin LEDs of the common cathode variety, check using diode test on a multimeter to ensure that the center pin is GND and that you know which colour goes where. Alternatively, jam a CR2032 battery between the pins. 
@@ -56,4 +56,4 @@ As required by the **CERN Open Hardware Licence v1.2**, here is the list of modi
 - **Form Factor Maintenance:** Removed the optional cut-off switch from the original schematic. This freed up enough space to add the extra resistor required for the 3rd color without increasing the overall size of the PCB.
 
 ### ⚠️ Licensing & Attribution Notice
-Any derivative work, manufacture, or commercial distribution of this modified board **MUST retain the original credits to TEBL and the modification credits to Marsupial ([://wordpress.com](https://://wordpress.com))**. All derivative hardware layouts and code must remain open-source under the CERN OHL v1.2 license terms.
+Any derivative work, manufacture, or commercial distribution of this modified board **MUST retain the original credits to [TEBL](https://github.com/tebl/C64-IRQ-LED) and the modification credits to [We're All Geeks](https://github.com/wereallgeek/C64-ShiftIRQ-LED) **. All derivative hardware layouts and code must remain open-source under the CERN OHL v1.2 license terms.
