@@ -46,3 +46,14 @@ Most parts should be easy to get a hold of from your favourite local electronic 
 | U1           | 74LS04 or 74HCT04 (DIP-14)            |     1 |
 
 *) These are 4 pin LEDs of the common cathode variety, check using diode test on a multimeter to ensure that the center pin is GND and that you know which colour goes where. Alternatively, jam a CR2032 battery between the pins. 
+
+## 🛠️ Modifications & Changelog (CERN OHL v1.2 Compliance)
+
+As required by the **CERN Open Hardware Licence v1.2**, here is the list of modifications made to the original design by **TEBL**:
+
+- **3rd Color Integration:** Altered the original circuitry to support a full 3-color RGB LED.
+- **Logic Chip Optimization:** Connected the remaining unused gates of the **74LS04** logic IC to successfully monitor and display the Shift-LOCK / Caps-Lock status alongside CPU usage.
+- **Form Factor Maintenance:** Removed the optional cut-off switch from the original schematic. This freed up enough space to add the extra resistor required for the 3rd color without increasing the overall size of the PCB.
+
+### ⚠️ Licensing & Attribution Notice
+Any derivative work, manufacture, or commercial distribution of this modified board **MUST retain the original credits to TEBL and the modification credits to Marsupial ([://wordpress.com](https://://wordpress.com))**. All derivative hardware layouts and code must remain open-source under the CERN OHL v1.2 license terms.
