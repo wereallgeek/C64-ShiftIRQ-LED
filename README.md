@@ -43,6 +43,9 @@ The last piece of the puzzle is attaching the whole thing to the C64 motherboard
 Before powering up, double-check that GND and VCC is in the correct spot, swapping them around will kill the IC on the IRQ LED board. Enjoy your color-changing green power LED!
 
 # HOW IT WORKS
+Of course the sky is the limit - while I am using it for SHIFT-LOCK and IRQ (CPU usage) any signal can be used with this circuitry, have fun with it!
+
+Here is how this thing behaves:
 - 5V and GND are what it takes to illuminate the power led. 
 - When the IRQ signal is high, the power led will _change_ from its initial color in favor of the second color.
 - When the SHIFT-LOCK signal is high, the 3rd color will illuminate _in addition to_ the initial color
