@@ -13,6 +13,8 @@ The IRQ LED module is a simple design based on a 74LS04 logic chip.
 
 Half the chip turns out not being used, so altering to add another LED wasn't much of a problem.
 
+![Schematics](https://github.com/wereallgeek/C64-ShiftIRQ-LED/raw/main/gallery/schematics.jpg)
+
 The original design had the ability for a cut-off switch, but I have never implemented it, so it was removed to make room for the extra resistor for the 3rd color without increasing board size.
 
 ## Build and install
@@ -22,22 +24,32 @@ You need to get a common cathode (*CC*) LED with more than one colour, To fully 
 
 Note: it is still possible to use this circuit for just 2 color variation and omit the extra parts.
 
-![All together now](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2000.48.12.jpg)
-![Fitting](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2000.47.35.jpg)
+![Schematics](https://github.com/wereallgeek/C64-ShiftIRQ-LED/raw/main/gallery/board.jpg)
 
 Next step is to remove the old power LED from the computer. The newer RGB LED might be a tight fit for the existing LED mount though it should fit - just apply some pressure on the front to snap it into place. Afterwards, add the module on top - it might stay on there by itself. if it doesn't you'll need to add some double-sided tape to the IC. I personally add some wiring and keep the wiring and board in place with masking tape.
 
 With proper measurements for length of cable between the LED and where the circuit board can be hold, now is a good time to solder everything together. Having made this mod multiple times, I like to have just one connector (not two) on the circuit. Having one make for an easy removal, but there's often issues keeping two connected during assembly. If I stick the board on the upper case, I like to solder the LED wire in place and have a connector for the bottom section; if I stick the board on the bottom half of the computer e.g. on the keyboard, I like to have the LED on a connector. To each their own, YMMV.
 
 
-![Adding wires](https://github.com/tebl/C64-IRQ-LED/raw/main/gallery/2020-11-21%2000.38.46.jpg)
+The last piece of the puzzle is attaching the whole thing to the C64 motherboard, you can refer to the picture above as this is where I added the wires needed. I'm using a cut-off set of female dupont wires, the easiest is to wire them to the cartridge port and matching the female part of it to the **markings on the board** (pin order has been changed). Looking at the cartridge port as pictured below: 
+- Cartridge port Pin 1 goes to GND (J1 pin 1)
+- Cartridge port Pin 3 goes to VCC (J1 pin 2)
+- Cartridge port Pin 4 goes to IRQ (J1 pin 3)
 
-The last piece of the puzzle is attaching the whole thing to the C64 motherboard, you can refer to the picture above as this is where I added the wires needed. I'm using a cut-off set of female dupont wires, the easiest is to wire them to the cartridge port and matching the female part of it to the **markings on the board** (pin order has been changed). Looking at the cartridge port as pictured above: 
-- Pin 1, the blue wire, goes to GND (J1 pin 1)
-- Pin 3, the green wire, goes to VCC (J1 pin 2)
-- Pin 4, the yellow wire, goes to IRQ (J1 pin 3)
+![C64 signal source](https://github.com/wereallgeek/C64-ShiftIRQ-LED/raw/main/gallery/commodore64signal.jpg) ![mechboard signal source](https://github.com/wereallgeek/C64-ShiftIRQ-LED/raw/main/gallery/mechboardsignal.jpg) 
 
-Before powering up, double-check that GND and VCC is in the correct spot, swapping them around will kill the IC on the IRQ LED board. Enjoy your freqeuently green power LED!
+5V & Ground can be also taken from the Mechboard, along with the shift-lock signal as seen in the picture above.
+
+Before powering up, double-check that GND and VCC is in the correct spot, swapping them around will kill the IC on the IRQ LED board. Enjoy your color-changing green power LED!
+
+# HOW IT WORKS
+- 5V and GND are what it takes to illuminate the power led. 
+- When the IRQ signal is high, the power led will _change_ from its initial color in favor of the second color.
+- When the SHIFT-LOCK signal is high, the 3rd color will illuminate _in addition to_ the initial color
+
+giving e.g. green+blue (cyan) and red+blue (purple) instead of green and red while the shift is locked.
+
+This way, the shift lock _alter_ the led color, but the IRQ/ non-IRQ state is still visible
 
 # BOM
 Most parts should be easy to get a hold of from your favourite local electronic component shop, but since I don't have access to the more serious ones I'm mostly getting my components from ebay/AliExpress (free shipping most places, but plan on waiting 3-4 weeks though).
