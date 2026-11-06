@@ -59,7 +59,7 @@ Most parts should be easy to get a hold of from your favourite local electronic 
 
 | Reference    | Item                                  | Count |
 | ------------ | ------------------------------------- | ----- |
-| PCB          | Fabricate using Gerber files or order [here](https://www.pcbway.com/project/shareproject/Commodore_64_IRQ_Mechboard_Shift_Lock_LED_module_bc6c7e6d.html) |     1 |
+| PCB          | Fabricate using Gerber files ([order](https://www.pcbway.com/project/shareproject/Commodore_64_IRQ_Mechboard_Shift_Lock_LED_module_bc6c7e6d.html)) |     1 |
 | D1 *         | 5mm RGB LED (common cathode)          |     1 |
 | J1           | 4-pin right-angle header pins         |     1 |
 | R1,R2,R3     | 330 ohm resistor                      |     3 | 
